@@ -28,7 +28,8 @@ This project implements an automated trading bot for executing trades based on d
 2. Install dependencies:
 
  ```bash
-pip install -r requirements.txt```
+pip install -r requirements.txt
+bash```
 
 3. Configure API keys:
 
