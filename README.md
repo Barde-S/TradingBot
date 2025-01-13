@@ -27,8 +27,7 @@ This project implements an automated trading bot for executing trades based on d
    cd trading-bot
 2. Install dependencies:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
 3. Configure API keys:
 
