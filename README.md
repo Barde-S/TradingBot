@@ -26,7 +26,6 @@ This project implements an automated trading bot for executing trades based on d
    git clone https://github.com/yourusername/trading-bot.git
    cd trading-bot
 2. Install dependencies:
- ```bash
 pip install -r requirements.txt
 3. Configure API keys:
 Update the config.py file with your Alpaca and OANDA API credentials:
