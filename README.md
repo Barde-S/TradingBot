@@ -25,12 +25,12 @@ This project implements an automated trading bot for executing trades based on d
    ```bash
    git clone https://github.com/yourusername/trading-bot.git
    cd trading-bot
-Install dependencies:
+2. Install dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Configure API keys:
+3. Configure API keys:
 
 Update the config.py file with your Alpaca and OANDA API credentials:
 python
@@ -39,7 +39,7 @@ access_token = 'YOUR_OANDA_ACCESS_TOKEN'
 accountID = 'YOUR_OANDA_ACCOUNT_ID'
 API_KEY = 'YOUR_ALPACA_API_KEY'
 API_SECRET = 'YOUR_ALPACA_API_SECRET'
-Usage
+## Usage
 1. Import Test Data
 Fetch forex data for the EUR/USD pair:
 
@@ -71,11 +71,11 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 scheduler = BlockingScheduler()
 scheduler.add_job(trading_job, 'cron', ... )
 scheduler.start()
-Key Files
+## Key Files
 trading_bot.py: Core logic for signal generation and trading.
 config.py: Configuration file for API credentials.
 requirements.txt: List of dependencies.
-Testing
+## Testing
 Test the connection and functionality:
 
 Verify valid symbols and timeframes with Alpaca:
@@ -88,14 +88,15 @@ python
 Copy code
 response = requests.get(url, headers=headers)
 print(response.text)
-Note
+## Note
 Ensure your API keys and account credentials are valid and stored securely. Avoid hardcoding sensitive information directly in the script.
 
-Contributing
+## Contributing
 Contributions are welcome! Feel free to submit a pull request or report issues.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Disclaimer
+## Disclaimer
 This bot is for educational purposes only. Use it at your own risk, and ensure compliance with all applicable laws and regulations.
+
