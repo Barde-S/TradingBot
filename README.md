@@ -28,6 +28,7 @@ This project implements an automated trading bot for executing trades based on d
 2. Install dependencies:
   ```bash 
 pip install -r requirements.txt
+### </br>
 4. Configure API keys:
 Update the config.py file with your Alpaca and OANDA API credentials:
  ```python
