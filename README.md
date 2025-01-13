@@ -27,44 +27,45 @@ This project implements an automated trading bot for executing trades based on d
    cd trading-bot
 2. Install dependencies:
   ```bash 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. Configure API keys:
 Update the config.py file with your Alpaca and OANDA API credentials:
  ```bash
-access_token = 'YOUR_OANDA_ACCESS_TOKEN'
-accountID = 'YOUR_OANDA_ACCOUNT_ID'
-API_KEY = 'YOUR_ALPACA_API_KEY'
-API_SECRET = 'YOUR_ALPACA_API_SECRET'
+   access_token = 'YOUR_OANDA_ACCESS_TOKEN'
+   accountID = 'YOUR_OANDA_ACCOUNT_ID'
+   API_KEY = 'YOUR_ALPACA_API_KEY'
+   API_SECRET = 'YOUR_ALPACA_API_SECRET'
 
 ## Usage
 1. Import Test Data
 Fetch forex data for the EUR/USD pair:
 
 ```bash
-import yfinance as yf
-dataF = yf.download("EURUSD=X", start="2022-10-7", end="2022-12-5", interval='1h')
+   import yfinance as yf
+   dataF = yf.download("EURUSD=X", start="2022-10-7", end="2022-12-5", interval='1h')
 
 2. Signal Generation
 Define a signal generator to identify bullish or bearish patterns:
 
 ```bash
-def signal_generator(df):
-    # Define patterns for trade signals
-    ...
+   def signal_generator(df):
+ # Define patterns for trade signals
+   ...
 3. Execute Trades
 Integrate with OANDA and Alpaca APIs for executing trades based on signals:
 
 ```bash
-from oandapyV20 import API
-from alpaca_trade_api.rest import REST
+   from oandapyV20 import API
+   from alpaca_trade_api.rest import REST
 4. Automated Execution
 Schedule trading jobs to execute orders at predefined intervals:
 ```bash
-from apscheduler.schedulers.blocking import BlockingScheduler
-scheduler = BlockingScheduler()
-scheduler.add_job(trading_job, 'cron', ... )
-scheduler.start()
+   from apscheduler.schedulers.blocking import BlockingScheduler
+   scheduler = BlockingScheduler()
+   scheduler.add_job(trading_job, 'cron', ... )
+   scheduler.start()
+
 ## Key Files
 trading_bot.py: Core logic for signal generation and trading.
 config.py: Configuration file for API credentials.
@@ -74,12 +75,12 @@ Test the connection and functionality:
 
 Verify valid symbols and timeframes with Alpaca:
 ```bash
-api.list_assets()
-api.list_timeframes()
-Check API responses:
+   api.list_assets()
+   api.list_timeframes()
+   Check API responses:
 ```bash
-response = requests.get(url, headers=headers)
-print(response.text)
+   response = requests.get(url, headers=headers)
+   print(response.text)
 ## Note
 Ensure your API keys and account credentials are valid and stored securely. Avoid hardcoding sensitive information directly in the script.
 
